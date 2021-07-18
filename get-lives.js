@@ -23,6 +23,10 @@ const puppeteer = require('puppeteer');
             }))
         )
 
+    lives.map(live => (
+        live.data.indexOf('Streamed') == 0 ? live.origem = 'Stream' : live.origem = 'Other',
+        live.data = live.data.replace('Streamed ','')
+    ))
     
     console.log(lives),
 
