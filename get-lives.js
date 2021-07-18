@@ -13,13 +13,17 @@ const puppeteer = require('puppeteer');
     const lives = await page.evaluate(() => 
         Array.from(document.querySelectorAll('#contents #contents .ytd-item-section-renderer'))
             .map(live => ({
-                meta:      live.querySelector("#title-wrapper a").getAttribute('aria-label'),
+                metadata:      live.querySelector("#title-wrapper a").getAttribute('aria-label'),
+                visualizacoes: live.querySelector("#metadata-line span:nth-child(1)").innerText.trim(),
+                data: live.querySelector("#metadata-line span:nth-child(2)").innerText.trim(),
+                //thumbnail: live.querySelector(".style-scope .yt-img-shadow").src,
+                canal:     live.querySelector("#channel-name .yt-simple-endpoint").innerText.trim(),
+                canal_link:     live.querySelector("#channel-name .yt-simple-endpoint").href,
+                origem: '',
             }))
         )
-    
 
-    //console.log(titulos),
-    //console.log(metadata),
+    
     console.log(lives),
 
     await browser.close();
