@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/fernandadias/youtube-scrap-search#readme",
   "dependencies": {
-    "puppeteer": "^10.1.0"
+    "fs": "0.0.1-security",
+    "puppeteer": "^10.1.0",
+    "stringfy": "0.0.12"
   }
 }
