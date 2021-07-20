@@ -17,7 +17,7 @@ const search = 'results?search_query=live&sp=CAMSBggFEAEYAg%253D%253D';
     await page.waitForSelector('.ytd-item-section-renderer', { timeout: 10000 });
     
     // get related infos
-    const lives = await page.evaluate(() => 
+    let lives = await page.evaluate(() => 
         Array.from(document.querySelectorAll('#contents #contents .ytd-item-section-renderer'))
             .map(live => ({
                 live_name:          live.querySelector("#video-title").getAttribute("href") || 'not-found',
