@@ -1,0 +1,22 @@
+{
+  "name": "youtube-scrap-search",
+  "version": "1.0.0",
+  "description": "",
+  "main": "get-lives.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernandadias/youtube-scrap-search.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fernandadias/youtube-scrap-search/issues"
+  },
+  "homepage": "https://github.com/fernandadias/youtube-scrap-search#readme",
+  "dependencies": {
+    "puppeteer": "^10.1.0"
+  }
+}
